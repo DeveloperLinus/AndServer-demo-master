@@ -6,7 +6,6 @@ import com.yanzhenjie.andserver.annotation.Config
 import com.yanzhenjie.andserver.framework.config.Multipart
 import com.yanzhenjie.andserver.framework.config.WebConfig
 import com.yanzhenjie.andserver.framework.website.AssetsWebsite
-import com.yanzhenjie.andserver.framework.website.StorageWebsite
 
 @Config
 class AppConfig : WebConfig {
@@ -15,7 +14,7 @@ class AppConfig : WebConfig {
         delegate.addWebsite(AssetsWebsite(context, "/web/"))
 
         // 增加一个位于/sdcard/Download/AndServer/目录的网站
-        delegate.addWebsite(StorageWebsite("/sdcard/Download/AndServer/"))
+//        delegate.addWebsite(StorageWebsite("/sdcard/Download/AndServer/"))
 
         val uploadDir = FileUtil.getFile("sdcard/")
 
