@@ -85,4 +85,9 @@ class UserController {
     fun info(@PathVariable(name = "userId") userId: String?): String? {
         return userId
     }
+
+    @RequestMapping(path = ["/register"], method = [RequestMethod.GET, RequestMethod.POST])
+    fun register() : String {
+        return "register success"
+    }
 }

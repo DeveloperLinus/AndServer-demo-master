@@ -21,7 +21,7 @@ class AppConfig : WebConfig {
         delegate.setMultipart(Multipart.newBuilder()
             .allFileMaxSize(1024 * 1024 * 20) // 单个请求所有文件总大小
             .fileMaxSize(1024 * 1024 * 5) // 单个请求每个文件大小
-            .maxInMemorySize(1024 * 10) // 内存缓存大小
+            .maxInMemorySize(1024 * 20) // 内存缓存大小
             .uploadTempDir(uploadDir) // 上传文件保存目录
             .build())
     }
