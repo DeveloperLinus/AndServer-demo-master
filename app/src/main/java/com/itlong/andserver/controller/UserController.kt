@@ -33,20 +33,10 @@ class UserController {
         }
     }
 
-    @GetMapping("/")
-    fun index():String {
-        return "forward:/index.html"
-    }
-
     @ResponseBody
     @GetMapping("/project/info")
     fun newInfo(): String {
         return "I am new api."
-    }
-
-    @GetMapping("/projectInfo")
-    fun oldInfo(): String {
-        return "redirect:/project/info"
     }
 
 
